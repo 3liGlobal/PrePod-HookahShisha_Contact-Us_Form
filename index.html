@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hookah-Shisha&#x20;Support&#x20;Form&#x20;Sandbox-2</title>
+    <title>PrePod-Hookah-Shisha&#x20;Support&#x20;Form&#x20;Sandbox-2</title>
     <link href="css/form.css" rel="stylesheet" type="text/css">
     <script src="js/validation.js"></script>
 </head>
@@ -62,18 +62,21 @@
                                 <div class="zf-clearBoth"></div>
                             </li><!---------Single Line Ends Here---------->
                             <!---------Email Starts Here---------->
-                            <li class="zf-tempFrmWrapper zf-large col2"><label class="zf-labelName">
-                                    Email
-                                    <em class="zf-important">*</em>
+                            <li class="zf-tempFrmWrapper zf-large col2">
+                                <label class="zf-labelName">
+                                    Email<em class="zf-important">*</em>
                                 </label>
                                 <div class="zf-tempContDiv">
-                                    <span> <input fieldType=9 type="text" maxlength="255" name="Email" checktype="c5"
-                                            value="" placeholder="" /></span>
+                                    <span id="loaderContainer"> <input fieldType=9 type="text" maxlength="255"
+                                            name="Email" checktype="c5" value="" placeholder="" id="Email" />
+                                        <div id="loader"></div>
+                                    </span>
                                     <p id="Email_error" class="zf-errorMessage" style="display:none;">Please complete
                                         this required field.</p>
                                 </div>
                                 <div class="zf-clearBoth"></div>
-                            </li><!---------Email Ends Here---------->
+                            </li>
+                            <!---------Email Ends Here---------->
                         </div>
                         <div class="tem">
                             <!---------Phone Starts Here---------->
@@ -144,14 +147,13 @@
                                         <option value="Other">Other</option>
                                     </optgroup>
                                     <optgroup label="Order Issue">
-                                        <option value="Defective&#x20;Item">Defective&#x20;Item</option>
-                                        <option value="Missing&#x20;Item">Missing&#x20;Item</option>
-                                        <option value="Wrong&#x20;Item">Wrong&#x20;Item</option>
-                                        <option value="Payment&#x20;Issue">Payment&#x20;Issue</option>
-                                        <option value="Product&#x20;Assembly">Product&#x20;Assembly</option>
-                                        <option value="Damaged&#x20;Item">Damaged&#x20;Item</option>
-                                        <option value="Lost&#x20;Package">Lost&#x20;Package</option>
-                                        <option value="Other">Other</option>
+                                    <option value="Defective&#x20;Item">Defective&#x20;Item</option>
+                                    <option value="Missing&#x20;Item">Missing&#x20;Item</option>
+                                    <option value="Wrong&#x20;Item">Wrong&#x20;Item</option>
+                                    <option value="Wrong&#x20;Item">Wrong&#x20;Item</option>
+                                    <option value="Payment&#x20;Issue">Payment&#x20;Issue</option>
+                                    <option value="Product&#x20;Assembly">Product&#x20;Assembly</option>
+                                    <option value="Other">Other</option>
                                     </optgroup>
                                     <optgroup label="Order Status">
                                         <option value="Order&#x20;Status&#x20;Inquiry">Order&#x20;Status&#x20;Inquiry
@@ -165,11 +167,11 @@
                                             International&#x20;Return&#x20;Request</option>
                                     </optgroup>
                                     <optgroup label="Technical Support">
-                                        <option value="Login&#x20;Issue">Login&#x20;Issue</option>
-                                        <option value="Payment&#x20;Issue">Payment&#x20;Issue</option>
-                                        <option value="Promo&#x20;Code&#x20;Issue">Promo&#x20;Code&#x20;Issue</option>
-                                        <option value="Website&#x20;Issue">Website&#x20;Issue</option>
-                                        <option value="Other">Other</option>
+                                    <option value="Login&#x20;Issue&#x20;&#x28;for&#x20;related&#x20;issues&#x29;">Login&#x20;Issue&#x20;&#x28;for&#x20;related&#x20;issues&#x29;</option>
+                                    <option value="Payment&#x20;Issue">Payment&#x20;Issue</option>
+                                    <option value="Promo&#x20;Code&#x20;Issue">Promo&#x20;Code&#x20;Issue</option>
+                                    <option value="Website&#x20;Issue">Website&#x20;Issue</option>
+                                    <option value="Other">Other</option>
                                     </optgroup>
                                     <optgroup label="Wholesale Inquiry">
                                         <option value="Wholesale&#x20;Account&#x20;Information">
@@ -184,7 +186,13 @@
                                         <option value="Vendor&#x20;Inquiry">Vendor&#x20;Inquiry</option>
                                         <option value="Other">Other</option>
                                     </optgroup>
-                                </select>
+                                    <optgroup label="Shipping and Delivery Options">
+                                    <option value="Shipping&#x20;Carrier&#x20;Inquiry">Shipping&#x20;Carrier&#x20;Inquiry</option>
+                                    <option value="Local&#x20;Courier&#x20;Delivery&#x20;Options">Local&#x20;Courier&#x20;Delivery&#x20;Options</option>
+                                    <option value="Will&#x20;Call&#x20;Pickup&#x20;Information">Will&#x20;Call&#x20;Pickup&#x20;Information</option>
+                                    <option value="Freight&#x20;and&#x20;Bulk&#x20;Shipping&#x20;Options">Freight&#x20;and&#x20;Bulk&#x20;Shipping&#x20;Options</option>
+                                    </optgroup>
+                                    </select>
                                 <p id="Dropdown_error" class="zf-errorMessage" style="display:none;">Please complete
                                     this required field.</p>
                             </div>
@@ -219,7 +227,7 @@
                     </ul>
                 </div><!---------template Container Starts Here---------->
                 <ul>
-                    <li class="zf-fmFooter"><button class="zf-submitColor">Submit</button></li>
+                    <li class="zf-fmFooter"><button class="zf-submitColor" id="zf-submitColor">Submit</button></li>
                 </ul>
             </div><!-- 'zf-templateWrapper' ends -->
         </form>
@@ -228,7 +236,31 @@
         var zf_MandArray = ["Name_First", "Name_Last", "Email", "Dropdown", "SingleLine2"];
         var zf_FieldArray = ["Name_First", "Name_Last", "SingleLine", "Email", "PhoneNumber_countrycode", "SingleLine1", "Dropdown", "SingleLine2", "MultiLine"];
         var isSalesIQIntegrationEnabled = false;
-        var salesIQFieldsArray = [];</script>
+        var salesIQFieldsArray = [];
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        window.addEventListener('message', function (event) {
+            var email = event.data;
+            document.getElementById('Email').value = email;
+            document.getElementById("Email").readOnly = true;
+            let checkField = setInterval(function () {
+                if ($('#Email').val() !== '') {
+                    $('#loader').hide();
+                    clearInterval(checkField);
+                }
+            }, 100);
+            $('#loader').hide();
+        });
+    </script>
+    <script>
+        $('form').submit(function () {
+            $('#zf-submitColor').prop('disabled', true);
+            setTimeout(function () {
+                $('#zf-submitColor').prop('disabled', false);
+            }, 5000);
+        });
+    </script>
 </body>
 
 </html>
