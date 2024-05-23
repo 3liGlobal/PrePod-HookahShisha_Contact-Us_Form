@@ -122,37 +122,60 @@
                             </label>
                             <div class="zf-tempContDiv">
                                 <select class="zf-form-sBox" name="Dropdown" checktype="c1">
-                                    <option selected="true" value="-Select-">-Select-</option>
-                                    <option value="Address&#x20;Issue">Address Issue</option>
-                                    <option value="Age&#x20;Verification">Age Verification</option>
-                                    <option value="Broken&#x20;Item">Broken Item</option>
-                                    <option value="CSR&#x20;Error">CSR Error</option>
-                                    <option value="Customer&#x20;Issue">Customer Issue</option>
-                                    <option value="Fraud">Fraud</option>
-                                    <option value="General&#x20;Product&#x20;Knowledge">General Product Knowledge
-                                    </option>
-                                    <option value="International&#x20;Inquiry">International Inquiry</option>
-                                    <option value="Lost&#x20;Order">Lost Order</option>
-                                    <option value="Marketing&#x20;Inquiry">Marketing Inquiry</option>
-                                    <option value="Marketing&#x20;Issue">Marketing Issue</option>
-                                    <option value="Missing&#x20;Item">Missing Item</option>
-                                    <option value="Order&#x20;Cancellation">Order Cancellation</option>
-                                    <option value="Order&#x20;Status">Order Status</option>
-                                    <option value="Out&#x20;of&#x20;Stock">Out of Stock</option>
-                                    <option value="Payment&#x20;Inquiry">Payment Inquiry</option>
-                                    <option value="Product&#x20;Assembly">Product Assembly</option>
-                                    <option value="Product&#x20;Request">Product Request</option>
-                                    <option value="Promo&#x20;Code&#x20;Issue">Promo Code Issue</option>
-                                    <option value="Return&#x20;Inquiry">Return Inquiry</option>
-                                    <option value="Promo&#x20;Code&#x20;Issue">Promo Code Issue</option>
-                                    <option value="Return&#x20;Inquiry">Return Inquiry</option>
-                                    <option value="Shipping&#x20;Claims">Shipping Claims</option>
-                                    <option value="Shipping&#x20;Inquiry">Shipping Inquiry</option>
-                                    <option value="Shipping&#x20;Issue">Shipping Issue</option>
-                                    <option value="Voicemail">Voicemail</option>
-                                    <option value="Website&#x20;Issue">Website Issue</option>
-                                    <option value="Wholesale&#x20;Inquiry">Wholesale Inquiry</option>
-                                    <option value="Wrong&#x20;Item">Wrong Item</option>
+                                    <option selected="true" value="Select" disabled>Please Select</option>
+                                    <optgroup label="Account Issue">
+                                    <option value="Update&#x20;Account&#x20;Information">Update&#x20;Account&#x20;Information</option>
+                                    <option value="Forgot&#x20;Password">Forgot&#x20;Password</option>
+                                    <option value="Other&#x20;Login&#x20;Issue">Other&#x20;Login&#x20;Issue</option>
+                                    </optgroup>
+                                    <optgroup label="Cancel / Modify Existing Order">
+                                    <option value="Order&#x20;Cancellation&#x20;Request">Order&#x20;Cancellation&#x20;Request</option>
+                                    <option value="Modify&#x20;Order&#x20;Request">Modify&#x20;Order&#x20;Request</option>
+                                    <option value="Modify&#x20;Address&#x20;Request">Modify&#x20;Address&#x20;Request</option>
+                                    <option value="Modify&#x20;Shipping&#x20;Method&#x20;Request">Modify&#x20;Shipping&#x20;Method&#x20;Request</option>
+                                    </optgroup>
+                                    <optgroup label="International Inquiry">
+                                    <option value="International&#x20;Returns">International&#x20;Returns</option>
+                                    <option value="International&#x20;Refused&#x20;Package">International&#x20;Refused&#x20;Package</option>
+                                    <option value="International&#x20;Shipping">International&#x20;Shipping</option>
+                                    <option value="Other">Other</option>
+                                    </optgroup>
+                                    <optgroup label="Order Issue">
+                                    <option value="Defective&#x20;Item">Defective&#x20;Item</option>
+                                    <option value="Missing&#x20;Item">Missing&#x20;Item</option>
+                                    <option value="Wrong&#x20;Item">Wrong&#x20;Item</option>
+                                    <option value="Payment&#x20;Issue">Payment&#x20;Issue</option>
+                                    <option value="Product&#x20;Assembly">Product&#x20;Assembly</option>
+                                    <option value="Damaged&#x20;Item">Damaged&#x20;Item</option>
+                                    <option value="Lost&#x20;Package">Lost&#x20;Package</option>
+                                    <option value="Other">Other</option>
+                                    </optgroup>
+                                    <optgroup label="Order Status">
+                                    <option value="Order&#x20;Status&#x20;Inquiry">Order&#x20;Status&#x20;Inquiry</option>
+                                    <option value="Tracking&#x20;Information">Tracking&#x20;Information</option>
+                                    </optgroup>
+                                    <optgroup label="Returns / Exchange Request">
+                                    <option value="Domestic&#x20;Return&#x20;Request">Domestic&#x20;Return&#x20;Request</option>
+                                    <option value="International&#x20;Return&#x20;Request">International&#x20;Return&#x20;Request</option>
+                                    </optgroup>
+                                    <optgroup label="Technical Support">
+                                    <option value="Login&#x20;Issue">Login&#x20;Issue</option>
+                                    <option value="Payment&#x20;Issue">Payment&#x20;Issue</option>
+                                    <option value="Promo&#x20;Code&#x20;Issue">Promo&#x20;Code&#x20;Issue</option>
+                                    <option value="Website&#x20;Issue">Website&#x20;Issue</option>
+                                    <option value="Other">Other</option>
+                                    </optgroup>
+                                    <optgroup label="Wholesale Inquiry">
+                                    <option value="Wholesale&#x20;Account&#x20;Information">Wholesale&#x20;Account&#x20;Information</option>
+                                    </optgroup>
+                                    <optgroup label="General Inquiries">
+                                    <option value="Product&#x20;Assembly">Product&#x20;Assembly</option>
+                                    <option value="Affiliate&#x20;Information&#x20;Request">Affiliate&#x20;Information&#x20;Request</option>
+                                    <option value="Marketing&#x20;Inquiry">Marketing&#x20;Inquiry</option>
+                                    <option value="Product&#x20;Request">Product&#x20;Request</option>
+                                    <option value="Vendor&#x20;Inquiry">Vendor&#x20;Inquiry</option>
+                                    <option value="Other">Other</option>
+                                    </optgroup>
                                 </select>
                                 <p id="Dropdown_error" class="zf-errorMessage" style="display:none;">Please complete
                                     this required field.</p>
